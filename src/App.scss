@@ -1,0 +1,53 @@
+// App.scss
+
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding-top: 0;
+  text-align: center;
+}
+
+.app {
+
+  .header {
+    margin-top: 0;
+    transition: transform 0.3s linear; /* Transición suave del transform */
+    &:hover{
+      transform: scale(1.09); /* Escala la imagen al pasar el mouse */
+    }
+    .logo {
+      height: 79px;
+      padding: 1.5em; /* Espaciado alrededor del logo */
+      will-change: transform; /* Mejora el rendimiento para animaciones */
+      animation: rotate360 13.9s linear infinite;
+
+      img {
+        display: block; /* Asegura que la imagen se ajuste correctamente */
+        width: auto;
+        height: 100%; /* Ajusta el alto de la imagen según el contenedor */
+      }
+
+      &:hover {
+        animation-play-state: paused; /* Pausa cualquier animación activa */
+        //*filter: drop-shadow(0 0 10px rgba(253, 253, 253, 0.5)); /* Aplica sombra al pasar el mouse */
+      }
+    }
+
+    a {
+      display: block; 
+    }
+  }
+
+  // .container {
+  //   // Estilos para el contenedor principal, si es necesario
+  // }
+}
+
+@keyframes rotate360 {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-360deg);
+  }
+}

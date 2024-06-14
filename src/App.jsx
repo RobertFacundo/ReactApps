@@ -1,7 +1,9 @@
 
 import reactLogo from './assets/react.svg'
-
 import './App.scss'
+import Componente1 from './componente1/Componente1.jsx'
+
+
 
 function App() {
   return (
@@ -12,7 +14,7 @@ function App() {
         </a>
       </div>
       <div className='container'>
-
+        <Componente1 />
       </div>
     </div>
   )

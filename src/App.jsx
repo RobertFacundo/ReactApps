@@ -2,7 +2,12 @@
 import reactLogo from './assets/react.svg'
 import './App.scss'
 import Componente1 from './componente1/Componente1.jsx'
-
+import CounterSimple from './counters/CounterSimple.jsx'
+import CounterMedium from './counters/countermedium.jsx'
+import Stopwatch from './counters/stopwatch.jsx'
+import LocalTimeAndLocation from './timelocation/timelocation.jsx'
+import ToastButton from './toast/toast.jsx'
+import ImageZoom from './mouse/zoom.jsx'
 
 
 function App() {
@@ -14,7 +19,21 @@ function App() {
         </a>
       </div>
       <div className='container'>
-        <Componente1 />
+        <section className='div'>
+          <div className='subseccion'>
+            <Componente1 />
+            <div className='secciont'>
+              <LocalTimeAndLocation />
+              <ToastButton />
+            </div>
+          </div>
+          <div className='counters'>
+            <CounterSimple />
+            <CounterMedium />
+            <Stopwatch />
+          </div>
+        </section>
+         <ImageZoom />
       </div>
     </div>
   )

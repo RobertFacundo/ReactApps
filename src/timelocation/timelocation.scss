@@ -1,0 +1,29 @@
+.secciont {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    margin-left: 70px;
+    text-shadow: 1px 1px 23px rgba(255, 255, 255, 0.501);
+    letter-spacing: 5px;
+    background: radial-gradient(circle, #ffffff, #dbddde, #b8bcbd, #979d9a, #7b7d77);
+    -webkit-background-clip: text;
+    /* Para navegadores WebKit */
+    background-clip: text;
+    color: transparent;
+    font-family: "Anta", sans-serif, monospace;
+
+    
+    h1 {
+        font-size: 40px;
+        width: 10ch;
+        margin: 10px;
+        text-align: center;
+    }
+
+    h2 {
+        font-size: 24px;
+        margin: 0.5rem 0;
+    }
+
+}

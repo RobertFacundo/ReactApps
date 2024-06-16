@@ -1,0 +1,78 @@
+.medium {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-left: 13px;
+    border-width: 0 2px 0px 2px;
+    /* Establecer solo el borde izquierdo */
+    border-style: solid;
+    border-image: linear-gradient(to top, #646216, #847c0e, #a39806, )1;
+
+    p {
+        background: linear-gradient(to right, #646216, #847c0e, #a39806, ); // Gray to White;
+        -webkit-background-clip: text;
+        /* Para navegadores WebKit */
+        background-clip: text;
+        color: transparent;
+        text-shadow: 1px 1px 11px rgba(0, 0, 0, 0.399);
+        font-size: 23px;
+        margin: 0px 20px;
+    }
+
+    label {
+
+        background: linear-gradient(to right, #646216, #847c0e, #a39806, ); // Gray to White;
+        -webkit-background-clip: text;
+        /* Para navegadores WebKit */
+        background-clip: text;
+        color: transparent;
+        text-shadow: 1px 1px 11px rgba(0, 0, 0, 0.399);
+        font-size: 23px;
+        margin: 17px 20px;
+
+        .step-input {
+            width: 35px;
+            font-size: 18px;
+            border: 2px solid rgba(255, 217, 0, 0.259);
+            border-radius: 5px;
+            outline: none;
+            transition: border-color 0.3s ease;
+            background-image: linear-gradient(to right, #eef1f4, #d9e1e3, #c7d1d0, #b8c1bb, #adb0a5);
+            text-align: center;
+            background: linear-gradient(to right, #646216, #847c0e, #a39806, ); // Gray to White;
+            -webkit-background-clip: text;
+            /* Para navegadores WebKit */
+            background-clip: text;
+            color: transparent;
+        }
+    }
+
+    .bots {
+        display: flex;
+        flex-direction: row;
+
+        .masmenos {
+            color: rgb(10, 10, 10);
+            background-color: transparent;
+            font-size: 39px;
+            margin: 10px;
+            border: none;
+            background: linear-gradient(to right, #afab2b, #eede09, #a39806, ); // Gray to White;
+            -webkit-background-clip: text;
+            /* Para navegadores WebKit */
+            background-clip: text;
+            color: transparent;
+            text-shadow: 1px 1px 11px rgba(0, 0, 0, 0.485);
+            cursor: pointer;
+            margin: 0px 20px;
+            transition: all 0.4s linear;
+
+            &:hover {
+                transform: scale(1.1);
+            }
+        }
+    }
+}
+
+

@@ -1,0 +1,24 @@
+.img-zoom-container {
+    position: relative;
+    display: inline-block;
+    margin-left: 50px;
+  
+  
+  .item-img {
+    display: block;
+    width: 400px; /* Ancho de la imagen */
+    height: auto; /* Altura automática */
+    transition: transform 0.2s ease-in-out; /* Transición suave para transformaciones */
+    cursor: zoom-in;
+  }
+  .zoom-canvas{
+    position: absolute;
+    top: 0;
+    left: 100%; // Posición a la derecha de la imagen
+    margin-left: 10px; //
+  }
+}
+
+  
+
+  

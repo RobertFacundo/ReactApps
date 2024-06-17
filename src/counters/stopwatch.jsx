@@ -62,7 +62,7 @@ const Stopwatch = () => {
 
     return (
         <section className="stopwatch-container">
-            <h2>Intenta detener el cronómetro en número par</h2>
+            <h2>Intenta detener el <br /> cronómetro en número par</h2>
             <p>{time}</p>
 
             <div className="botones">

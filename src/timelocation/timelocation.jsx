@@ -21,9 +21,13 @@ const LocalTimeAndLocation = () => {
             });
         return () => clearInterval(timer);
     }, []);
+       
+    const dateOptions = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+    const currentDate = time.toLocaleDateString('es-ES', dateOptions);
 
     return (
-        <div>
+        <div className="time">
+            <h2 className="dia">{currentDate}</h2>
             <h1>{time.toLocaleTimeString()}</h1>
             <h2>{location.city}, {location.country}</h2>
         </div>

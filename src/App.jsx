@@ -1,6 +1,7 @@
-
+import React from 'react';
 import reactLogo from './assets/react.svg'
 import './App.scss'
+import Footer from './footer/footer.jsx'
 import Componente1 from './componente1/Componente1.jsx'
 import CounterSimple from './counters/CounterSimple.jsx'
 import CounterMedium from './counters/countermedium.jsx'
@@ -11,29 +12,35 @@ import ImageZoom from './mouse/zoom.jsx'
 
 
 function App() {
+
   return (
     <div className='app'>
-      <div className='header'>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo" alt="React logo" />
-        </a>
-      </div>
-      <div className='container'>
-        <section className='div'>
-          <div className='subseccion'>
-            <Componente1 />
-            <div className='secciont'>
-              <LocalTimeAndLocation />
-              <ToastButton />
-            </div>
+      <div className='columnseccion'>
+        <div className='primeraseccion'>
+          <div className='header'>
+            <Footer />
+            <a href="https://react.dev" target="_blank">
+              <img src={reactLogo} className="logo" alt="React logo" />
+            </a>
           </div>
-          <div className='counters'>
-            <CounterSimple />
-            <CounterMedium />
-            <Stopwatch />
+          <div className='container'>
+            <section className='div'>
+              <div className='subseccion'>
+                <Componente1 />
+                <div className='secciont'>
+                  <LocalTimeAndLocation />
+                  <ToastButton />
+                </div>
+              </div>
+              <div className='counters'>
+                <CounterSimple />
+                <CounterMedium />
+                <Stopwatch />
+              </div>
+            </section>
           </div>
-        </section>
-         <ImageZoom />
+        </div>
+        <ImageZoom />
       </div>
     </div>
   )

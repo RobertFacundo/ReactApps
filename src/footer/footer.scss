@@ -1,0 +1,34 @@
+.footer {
+    letter-spacing: 1px;
+    background: radial-gradient(circle, #ffffff, #dbddde, #b8bcbd, #979d9a, #7b7d77);
+    -webkit-background-clip: text;
+    /* Para navegadores WebKit */
+    background-clip: text;
+    color: transparent;
+    font-family: "Anta", sans-serif, monospace;
+    padding-top: 40px;
+    z-index: 1000;
+
+    .p-footer {
+        text-decoration: none;
+        a {
+            text-decoration: none;
+            background: radial-gradient(circle, #ffffffa4, #dbdddea0, #b8bcbd9f, #979d9aa6, #7b7d7794);
+            -webkit-background-clip: text;
+            /* Para navegadores WebKit */
+            background-clip: text;
+            color: transparent;
+            font-family: "Anta", sans-serif, monospace;
+            transition: all 0.5s linear;
+            text-decoration: none;
+
+            &:hover {
+                background: linear-gradient(to right, #ffffff, #dbddde, #b8bcbd, #979d9a, #7b7d77);
+                -webkit-background-clip: text;
+                /* Para navegadores WebKit */
+                background-clip: text;
+                color: transparent;
+            }
+        }
+    }
+}

@@ -1,0 +1,117 @@
+.bucket-list {
+    width: 350px;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 5px;
+    margin-left: 100px;
+    padding: 15px;
+    box-shadow: 0px 0px 5px 4px rgba(255, 255, 255, 0.263);
+    border-radius: 9px;
+    // z-index: 1000;
+    position: absolute;
+    height: 440px;
+
+    h1 {
+        font-size: 33px;
+        margin-bottom: 20px;
+        margin-right: 25px;
+        background: radial-gradient(circle, #ffffff, #dbddde, #b8bcbd, #979d9a, #7b7d77);
+        -webkit-background-clip: text;
+        /* Para navegadores WebKit */
+        background-clip: text;
+        color: transparent;
+        text-shadow: 1px 1px 11px rgba(0, 0, 0, 0.399);
+    }
+
+    .input-container {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 20px;
+
+        input {
+            padding: 10px 0px;
+            font-size: 18px;
+            font-weight: 500;
+            border: 1px rgba(255, 255, 255, 0.049) solid;
+            border-radius: 4px;
+            margin-left: 15px;
+            background: transparent;
+            width: 280px;
+            background: radial-gradient(circle, #ffffff, #dbddde, #b8bcbd, #979d9a, #7b7d77);
+            -webkit-background-clip: text;
+            /* Para navegadores WebKit */
+            background-clip: text;
+            color: transparent;
+            text-shadow: 1px 1px 11px rgba(34, 33, 33, 0.399);
+            font-family: "Anta", sans-serif;
+        }
+
+        button {
+            padding: 10px 20px;
+            margin-left: 15px;
+            font-size: 16px;
+            background-color: transparent;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #272828;
+        }
+    }
+
+    ul {
+        list-style-type: none;
+        padding: 0;
+        overflow-y: auto;
+        /* Agrega scroll vertical cuando el contenido excede el tamaño del contenedor */
+        max-height: 300px;
+        overscroll-behavior: contain; 
+
+        li {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 500;
+            padding: 10px;
+            border-bottom: 1px solid #ccc;
+            background: linear-gradient(to right bottom, #905959, #b14f4e, #ce413e, #e82d28, #ff0000);
+            -webkit-background-clip: text;
+            /* Para navegadores WebKit */
+            background-clip: text;
+            color: transparent;
+            text-shadow: 1px 1px 11px rgba(173, 172, 172, 0.159);
+
+            span {
+                flex-grow: 1;
+                cursor: pointer;
+            }
+
+            button {
+                padding: 5px 10px;
+                font-size: 14px;
+                margin-left: 5px;
+                background-color: transparent;
+                color: white;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+            }
+
+            button:hover {
+                background-color: #7b787961;
+            }
+
+            &.completed span {
+                background: linear-gradient(to right bottom, #5a9059, #54ab53, #49c749, #36e339, #00ff14);
+                -webkit-background-clip: text;
+                /* Para navegadores WebKit */
+                background-clip: text;
+                color: transparent;
+                text-shadow: 1px 1px 11px rgba(193, 193, 193, 0.126);
+            }
+        }
+    }
+}

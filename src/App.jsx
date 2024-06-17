@@ -9,6 +9,8 @@ import Stopwatch from './counters/stopwatch.jsx'
 import LocalTimeAndLocation from './timelocation/timelocation.jsx'
 import ToastButton from './toast/toast.jsx'
 import ImageZoom from './mouse/zoom.jsx'
+import BucketList from './bucketlist/bucketlist.jsx';
+import LightBulb from './ligthbulb/ligthbulb.jsx';
 
 
 function App() {
@@ -41,6 +43,10 @@ function App() {
           </div>
         </div>
         <ImageZoom />
+        <div>
+          <LightBulb />
+          <BucketList />
+        </div>
       </div>
     </div>
   )

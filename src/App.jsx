@@ -11,6 +11,7 @@ import ToastButton from './toast/toast.jsx'
 import ImageZoom from './mouse/zoom.jsx'
 import BucketList from './bucketlist/bucketlist.jsx';
 import LightBulb from './ligthbulb/ligthbulb.jsx';
+import MemoryGame from './memorygame/memorygame.jsx';
 
 
 function App() {
@@ -46,6 +47,9 @@ function App() {
         <div>
           <LightBulb />
           <BucketList />
+        </div>
+        <div>
+        <MemoryGame />
         </div>
       </div>
     </div>

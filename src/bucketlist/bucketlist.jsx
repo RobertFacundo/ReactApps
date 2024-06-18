@@ -4,7 +4,7 @@ import './bucketlist.scss';
 const BucketList = () => {
     const [items, setItems] = useState([
         { text: 'Hacer karaoke en un bar de Tokyo', completed: false },
-        { text: 'Alimentar a un León', completed: false },
+        { text: 'Alimentar a un león', completed: false },
         { text: 'Tirar monedas en la Fontana Di Trevi', completed: false }
     ]);
 
@@ -48,7 +48,7 @@ const BucketList = () => {
                 />
                 <button onClick={handleAddItem}>+</button>
             </div>
-            <ul onWheel={(e) => e.stopPropagation()}>
+            <ul>
                 {items.map((item, index) => (
                     <li key={index} className={item.completed ? "completed" : ""}>
                         <span onClick={() => handleToggleItem(index)}>{item.text}</span>

@@ -14,10 +14,10 @@ const LightBulb = () => {
             <div className="bulb">
                 <img src={isOn ? "on.png": "off.png"} alt="Switch" />
             </div>
-            <label class="rocker rocker-small" onClick={toggleLight}>
+            <label className="rocker rocker-small" onClick={toggleLight}>
                 <input type="checkbox" />
-                    <span class="switch-left" onClick={toggleLight}></span>
-                    <span class="switch-right" onClick={toggleLight}></span>
+                    <span className="switch-left" onClick={toggleLight}></span>
+                    <span className="switch-right" onClick={toggleLight}></span>
             </label>
         </div>
     );

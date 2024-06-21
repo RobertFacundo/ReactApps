@@ -12,6 +12,8 @@ import ImageZoom from './mouse/zoom.jsx'
 import BucketList from './bucketlist/bucketlist.jsx';
 import LightBulb from './ligthbulb/ligthbulb.jsx';
 import MemoryGame from './memorygame/memorygame.jsx';
+import ContactForm from './form/form.jsx';
+import QuoteGenerator from './quotegenerator/quote.jsx';
 
 
 function App() {
@@ -49,7 +51,11 @@ function App() {
           <BucketList />
         </div>
         <div>
-        <MemoryGame />
+          <MemoryGame />
+        </div>
+        <div className='cq'>
+          <ContactForm />
+          <QuoteGenerator />
         </div>
       </div>
     </div>

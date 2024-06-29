@@ -42,11 +42,6 @@
         transition: all 0.5s linear;
         width: 400px;
 
-        .sol {
-            width: 80px;
-            opacity: 0;
-            transition: opacity 0.8s linear;
-        }
 
         input {
             margin-top: 5px;
@@ -105,21 +100,10 @@
             }
         }
 
-        .pasto {
-            width: 100%;
-            opacity: 0;
-            transition: opacity 1s ease-in-out;
-            border-bottom-left-radius: 8px;
-            border-bottom-right-radius: 8px;
-        }
 
         &:hover {
             transform: scale(1.08);
 
-            .sol,
-            .pasto {
-                opacity: 1;
-            }
 
             .click {
                 color: black;
@@ -136,7 +120,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background-image: linear-gradient(to bottom, #f7ff00, #faff62, #f1ff99, #fbff92, #9bfcba, #a7f8e0, #b6f4ea, #c6f0e8, #c7f3f3, #c7e4f5, #c8edf8, #c9eefb);
+            background-image: linear-gradient(to right bottom, #dfdfdf, #cdcdcd, #bbbbbb, #aaaaaa, #999999, #9b9b9b, #9d9d9d, #9f9f9f, #b5b5b5, #cbcbcb, #e1e1e1, #f8f8f8);
             transition: opacity 0.8s ease-in-out;
             border-radius: 8px;
             opacity: 0;

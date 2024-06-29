@@ -57,7 +57,6 @@ const Weather = React.memo(({ onInteract }) => {
         <div onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} onClick={handleClick} className={`weather ${weather ? 'display-shown' : ''}`} style={{ backgroundImage: `url(${background})`, height: '100vh', width: '800px', color: 'white', padding: '20px' }}>
             {showToolTip && <div className="tooltip">Weather</div>}
             <section className={`animacion ${weather ? 'no-hover' : ''}`}>
-                <img className="sol" src="../public/weather.png" alt="sun" />
                 <button className="click" onClick={handleSearch}>Obtener Clima</button>
                 <input
                     type="text"
@@ -75,7 +74,6 @@ const Weather = React.memo(({ onInteract }) => {
                     </ul>
 
                 )} */}
-                <img className="pasto" src="../public/grass.png" alt="grass" />
             </section>
             {weather && (
                 <div className="display">

@@ -3,6 +3,22 @@ form {
     margin-top: 20px;
     display: flex;
 
+    .tooltip {
+        position: absolute;
+        // top: -30px; // Adjust this value based on the desired tooltip position
+        // left: 50%;
+        transform: translateX(290px);
+        top: 0;
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        padding: 5px 10px;
+        border-radius: 5px;
+        z-index: 1;
+        font-size: 14px;
+        white-space: nowrap;
+    }
+
     .div {
         display: flex;
         flex-direction: column;
@@ -13,7 +29,7 @@ form {
             width: 300px;
             margin: 13px;
             padding: 11px;
-           
+
             font-size: 22px;
             border: none;
             font-family: "Anta", sans-serif;
@@ -24,6 +40,7 @@ form {
             /* Para navegadores WebKit */
             background-clip: text;
             color: transparent;
+
             &:focus {
                 border-color: #dcd8d8;
                 /* Cambiar el color del borde cuando el input está enfocado */
@@ -53,7 +70,7 @@ form {
             background-clip: text;
             color: transparent;
             text-align: center;
-        
+
             &:focus {
                 border-color: #dcd8d8;
                 /* Cambiar el color del borde cuando el input está enfocado */
@@ -74,17 +91,19 @@ form {
         font-size: 20px;
         letter-spacing: 5px;
         background-image: linear-gradient(to right, #fcfeff, #edf2f3, #dadfde, #d5d9d7, #c3c5c0);
-        &:hover{
+
+        &:hover {
             background-image: linear-gradient(to right, #eef1f4, #d9e1e3, #c7d1d0, #b8c1bb, #adb0a5);
-            
+
         }
+
         span {
             display: inline-block;
             transition: transform 0.3s ease; // Transición para el escalado del span
-          }
-        
-          &:hover span {
+        }
+
+        &:hover span {
             transform: scale(1.1); // Escalado del span al hacer hover en el botón
-          }
+        }
     }
 }

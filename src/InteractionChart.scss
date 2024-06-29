@@ -1,0 +1,16 @@
+.interaction-chart {
+    box-shadow: none;
+    margin-right: 150px;
+    margin-left: 150px;
+
+    h2{
+        margin: 30px;
+        font-size: 30px;
+        background: radial-gradient(circle, #ffffff, #dbddde, #b8bcbd, #979d9a, #7b7d77);
+        -webkit-background-clip: text;
+        /* Para navegadores WebKit */
+        background-clip: text;
+        color: transparent;
+    }
+
+}

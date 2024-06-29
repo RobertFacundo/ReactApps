@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import './form.scss';
 
-const ContactForm = () => {
+const ContactForm = React.memo(({ onInteract }) => {
+    const [showToolTip, setShowToolTip] = useState(false);
+
     const [formData, setFormData] = useState({
         name: '',
         email: '',
@@ -49,9 +51,22 @@ const ContactForm = () => {
 
     };
 
+    const handleClick = () => {
+        onInteract('Contactform');
+    }
+
+    const handleMouseEnter = () => {
+        setShowToolTip(true)
+    }
+
+    const handleMouseLeave = () => {
+        setShowToolTip(false)
+    }
+
 
     return (
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} onClick={handleClick} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+            {showToolTip && <div className="tooltip">ContactForm</div>}
             <div className="div">
                 <label htmlFor="name"></label>
                 <input placeholder="Nombre" type="text" id="name" name="name" value={formData.name} onChange={handleChange} required />
@@ -65,6 +80,6 @@ const ContactForm = () => {
             </div>
         </form>
     );
-};
+});
 
 export default ContactForm;

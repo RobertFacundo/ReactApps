@@ -1,6 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Anta&family=Fredericka+the+Great&family=Jersey+10&family=La+Belle+Aurore&display=swap');
 
 .stopwatch-container {
+    .tooltip {
+        position: absolute;
+        // top: -30px; // Adjust this value based on the desired tooltip position
+        // left: 50%;
+        transform: translateX(90px);
+        bottom: 50px;
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        padding: 5px 10px;
+        border-radius: 5px;
+        z-index: 1;
+        font-size: 14px;
+        white-space: nowrap;
+    }
     h2 {
         font-size: 18px;
         margin: 5px;

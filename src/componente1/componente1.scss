@@ -5,22 +5,38 @@
     border-radius: 9px;
     background-color: rgba(70, 67, 67, 0.129);
     height: 230px;
-    width: 290px;
+    width: 315px;
     transition: all 0.2s linear;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
     font-family: "Anta", sans-serif;
     font-weight: 200;
     font-size: 23px;
     letter-spacing: 3px;
     text-align: center;
+    margin-left: 30px;
 
     &:hover {
         transform: scale(1.02);
         // border: 1px solid rgba(255, 255, 255, 0.263);
         box-shadow: 0px 0px 13px 6px rgba(255, 255, 255, 0.263)
+    }
+
+    .tooltip {
+        position: absolute;
+        top: -30px; // Adjust this value based on the desired tooltip position
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        padding: 5px 10px;
+        border-radius: 5px;
+        z-index: 1;
+        font-size: 14px;
+        white-space: nowrap;
     }
 
     .titulo {
@@ -30,15 +46,18 @@
         background-clip: text;
         color: transparent;
         text-shadow: 1px 1px 11px rgba(255, 255, 255, 0.399);
+        margin-top: 40px;
     }
 
     .botones {
         display: flex;
         flex-direction: row;
         justify-content: space-around;
+        transform: translateY(-50px);
         img {
             width: 50px;
-            margin: 31px;
+            margin-left: 31px;
+            margin-right: 31px;
             cursor: pointer;
             transition: all 0.2s linear;
 

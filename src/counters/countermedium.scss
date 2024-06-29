@@ -8,6 +8,21 @@
     /* Establecer solo el borde izquierdo */
     border-style: solid;
     border-image: linear-gradient(to top, #646216, #847c0e, #a39806, )1;
+    .tooltip {
+        position: absolute;
+        // top: -30px; // Adjust this value based on the desired tooltip position
+        // left: 50%;
+        // transform: translateX(-50%);
+        bottom: 283px;
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        padding: 5px 10px;
+        border-radius: 5px;
+        z-index: 1;
+        font-size: 14px;
+        white-space: nowrap;
+    }
 
     p {
         background: linear-gradient(to right, #646216, #847c0e, #a39806, ); // Gray to White;

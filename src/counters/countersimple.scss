@@ -7,6 +7,21 @@
     text-align: center;
     padding-right: 20px;
     padding-left: 13px;
+    .tooltip {
+        position: absolute;
+        // top: -30px; // Adjust this value based on the desired tooltip position
+        // left: 50%;
+        // transform: translateX(-50%);
+        bottom: 48px;
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        padding: 5px 10px;
+        border-radius: 5px;
+        z-index: 1;
+        font-size: 14px;
+        white-space: nowrap;
+    }
     p {
         background: linear-gradient(to right, #646216, #847c0e, #a39806,); // Gray to White;
         -webkit-background-clip: text;

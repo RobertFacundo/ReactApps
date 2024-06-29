@@ -4,7 +4,7 @@
     align-items: center;
     justify-content: center;
     color: white;
-    margin-left: 15px;
+    margin-left: 80px;
     text-shadow: 1px 1px 23px rgba(255, 255, 255, 0.501);
     letter-spacing: 5px;
     background: radial-gradient(circle, #ffffff, #dbddde, #b8bcbd, #979d9a, #7b7d77);
@@ -13,6 +13,22 @@
     background-clip: text;
     color: transparent;
     font-family: "Anta", sans-serif, monospace;
+    .tooltip {
+        position: absolute;
+        // top: -30px; // Adjust this value based on the desired tooltip position
+        // left: 50%;
+        // transform: translateX(-50%);
+        // bottom: 283px;
+        top: 110px;
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        padding: 5px 10px;
+        border-radius: 5px;
+        z-index: 1;
+        font-size: 11px;
+        white-space: nowrap;
+    }
 
 
     .time {

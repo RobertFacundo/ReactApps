@@ -1,13 +1,36 @@
 .board {
     display: grid;
-    grid-template-columns: repeat(4, 150px); /* Aumentamos el tamaño de las columnas */
-    grid-gap: 50px; /* Aumentamos el espacio entre las tarjetas */
+    grid-template-columns: repeat(4, 150px);
+    /* Aumentamos el tamaño de las columnas */
+    grid-gap: 50px;
+    /* Aumentamos el espacio entre las tarjetas */
     margin-left: 90px;
     margin-top: 20px;
-  
+
+    .tooltip {
+        position: absolute;
+        // top: -30px; // Adjust this value based on the desired tooltip position
+        // left: 50%;
+        // transform: translateX(-50%);
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        padding: 5px 10px;
+        bottom: 40%;
+        writing-mode: vertical-rl;
+        transform: translateX(-70px) rotate(-180deg);
+        letter-spacing: 2px;
+        border-radius: 5px;
+        z-index: 1;
+        font-size: 18px;
+        white-space: nowrap;
+    }
+
     .card {
-        width: 180px; /* Aumentamos el ancho del card */
-        height: 180px; /* Aumentamos la altura del card */
+        width: 180px;
+        /* Aumentamos el ancho del card */
+        height: 180px;
+        /* Aumentamos la altura del card */
         background-color: #2e3a4613;
         display: flex;
         justify-content: center;
@@ -19,7 +42,7 @@
         user-select: none;
         position: relative;
         perspective: 1000px;
-  
+
         .card-inner {
             position: absolute;
             width: 100%;
@@ -27,11 +50,11 @@
             transition: transform 0.5s;
             transform-style: preserve-3d;
         }
-  
+
         &.is-flipped .card-inner {
             transform: rotateY(180deg);
         }
-  
+
         .card-front,
         .card-back {
             position: absolute;
@@ -43,27 +66,31 @@
             align-items: center;
             border-radius: 8px;
             transition: all 0.3s linear;
-            &:hover{
-             transform: scale(1.03);
+
+            &:hover {
+                transform: scale(1.03);
             }
         }
-  
+
         .card-front {
             background-color: #36383970;
         }
-  
+
         .card-back {
             background-color: #f0f0f0;
             color: #2e3a46;
             transform: rotateY(180deg);
-            pointer-events: none; 
+            pointer-events: none;
         }
-  
+
         .card-back img {
-            width: 100%; /* Ajustamos el tamaño de la imagen para ocupar todo el espacio */
+            width: 100%;
+            /* Ajustamos el tamaño de la imagen para ocupar todo el espacio */
             height: 100%;
-            object-fit: cover; /* Ajustamos la imagen para que cubra todo el espacio */
-            border-radius: 8px; /* Mantenemos el redondeo del borde */
+            object-fit: cover;
+            /* Ajustamos la imagen para que cubra todo el espacio */
+            border-radius: 8px;
+            /* Mantenemos el redondeo del borde */
         }
     }
 }

@@ -5,7 +5,9 @@ import "./memorygame.scss";
 import Card from "./card";
 import Confetti from "react-confetti";
 
-const MemoryGame = () => {
+const MemoryGame = React.memo(({ onInteract }) => {
+    const [showToolTip, setShowToolTip] = useState(false);
+
     const imagePaths = [
         "cats/all-hearts-here.jpg",
         "cats/chill_out354.jpg",
@@ -101,22 +103,35 @@ const MemoryGame = () => {
             const confettiTimeout = setTimeout(() => {
                 setConfettiActive(false);
             }, 5000); // Aquí puedes ajustar la duración del Confetti en milisegundos
-            
-            setFlippedCards([]); 
+
+            setFlippedCards([]);
             // Limpiar el timeout cuando se desmonte el componente o se reinicie el juego
             return () => clearTimeout(confettiTimeout);
         }
     }, [gameComplete]);
 
+    const handleClick = () => {
+        onInteract('MemoryGame');
+    }
+
+    const handleMouseEnter = () => {
+        setShowToolTip(true);
+    }
+
+    const handleMouseLeave = () => {
+        setShowToolTip(false);
+    }
+
     return (
-        <div className="board">
+        <div className="board" onClick={handleClick} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+            {showToolTip && <div className="tooltip">Memory Game</div>}
             {confettiActive && (
                 <Confetti width={5000}
                     numberOfPieces={600}
                     fadeOut={true} // Aplicar transición de desvanecimiento al finalizar
                     onConfettiComplete={() => {
                         setConfettiActive(false);
-                        setFlippedCards([]); 
+                        setFlippedCards([]);
                     }}
                 />
             )}
@@ -125,6 +140,6 @@ const MemoryGame = () => {
             ))}
         </div>
     );
-};
+});
 
 export default MemoryGame;

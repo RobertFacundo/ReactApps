@@ -17,7 +17,7 @@
 
 .app {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
 
   .columnseccion {
     display: flex;
@@ -96,7 +96,8 @@
           background-image: linear-gradient(to right, #eef1f4, #d9e1e3, #c7d1d0, #b8c1bb, #adb0a5);
           border-radius: 5px;
           margin-top: 45px;
-          margin-left: 50px;
+          margin-left: 100px;
+          margin-right: 13px;
           width: 600px;
           height: 200px;
           display: flex;
@@ -113,6 +114,21 @@
     .cq{
       display: flex;
       flex-direction: column;
+    }
+    .imagegenerator{
+      display: flex;
+      flex-direction: row;
+    }
+
+    .trivia{
+      margin-left: 150px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      max-width: 500px;
+      align-items: center;
+      transition: margin-left 0.3s ease-in-out; 
+      
     }
   }
 }

@@ -14,27 +14,40 @@
   font-family: "Lovers Quarrel", cursive;
   font-weight: 200;
 
-  .frase {
-    width: 550px;
+  .tooltip {
+    position: absolute;
+    top: -30px; // Adjust this value based on the desired tooltip position
+    left: 40%;
+    transform: translateX(-50%);
+    top: 149px;
+    transform: translateY(220px);
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 5px 10px;
+    border-radius: 5px;
+    z-index: 1;
+    font-size: 35px;
+    white-space: nowrap;
+  }
 
+  .frase {
+    width: 550px;// Permite que las palabras largas se dividan para ajustarse al contenedor
+    white-space: pre-wrap;
     .quote {
       z-index: 0;
       margin: 20px auto;
       padding-left: 90px;
       width: 300;
       font-size: 50px;
-      position: relative;
-      word-wrap: break-word; // Permite que las palabras largas se dividan para ajustarse al contenedor
-      white-space: pre-wrap;
-      word-wrap: break-word; // Permite que las palabras largas se dividan para ajustarse al contenedor
-      white-space: pre-wrap;
+      position: relative; 
       padding-top: 100px;
 
       span {
         display: inline-block;
         opacity: 0;
         animation: fadeIn 0.3s forwards;
-        word-break: break-word;
+        animation-delay: inherit; 
       }
     }
   }

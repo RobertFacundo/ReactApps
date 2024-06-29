@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import './componente1.scss';
 
-export default function Componente1() {
+const Componente1 = React.memo(({ onInteract}) => {
+    const [showTooltip, setShowTooltip] = useState(false);
+
 
     const gradients = [
         'linear-gradient(to right, rgb(2, 255, 2), white)',
@@ -52,8 +54,21 @@ export default function Componente1() {
     }
 
 
+    const handleMouseEnter = () => {
+        setShowTooltip(true);
+    }
+
+    const handleMouseLeave = () => {
+        setShowTooltip(false);
+    }
+
+    const handleClick = () => {
+        onInteract('Componente1');
+    }
+
     return (
-        <div className="seccion">
+        <div className="seccion" onClick={handleClick}  onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+              {showTooltip && <div className="tooltip">Componente1</div>}
             <h1 className="titulo">
                 <span
                     style={{
@@ -73,4 +88,6 @@ export default function Componente1() {
             </section>
         </div>
     )
-}
+});
+
+export default Componente1;

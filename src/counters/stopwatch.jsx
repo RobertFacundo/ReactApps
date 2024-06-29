@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from "react";
 import './stopwatch.scss';
 
-const Stopwatch = () => {
+const Stopwatch = React.memo(({ onInteract }) => {
+    const [showToolTip, setShowToolTip] = useState(false);
+
     const [time, setTime] = useState(0); // Estado para el tiempo en segundos (número entero)
     const [isRunning, setIsRunning] = useState(false); // Estado de cronómetro corriendo
     const [stopwatchInterval, setStopwatchInterval] = useState(null); // ID del intervalo
@@ -33,13 +35,13 @@ const Stopwatch = () => {
                 imageWidth: 600,
                 imageHeight: 400,
                 imageAlt: "Custom image",
-              });
+            });
             setTime(0);
             setStopwatchInterval(null);
         } else if ([1, 3, 5, 7, 9].includes(lastDigit)) {
             Swal.fire({
                 text: `Detuviste el cronómetro en número impar (${time}), sigue intentando`,
-            });  
+            });
         };
     };
 
@@ -60,18 +62,31 @@ const Stopwatch = () => {
         };
     }, [stopwatchInterval]); // El segundo argumento vacío [] asegura que el efecto se ejecute solo una vez al montar el componente
 
+    const handleClick = () => {
+        onInteract('StopWatch');
+    }
+
+    const handleMouseEnter = () => {
+        setShowToolTip(true)
+    }
+
+    const handleMouseLeave = () => {
+        setShowToolTip(false)
+    }
+
     return (
-        <section className="stopwatch-container">
+        <section className="stopwatch-container" onClick={handleClick} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+            {showToolTip && <div className="tooltip">StopWatch</div>}
             <h2>Intenta detener el <br /> cronómetro en número par</h2>
             <p>{time}</p>
 
             <div className="botones">
-            <img src="/recycle.png" alt="reset" onClick={resetStopwatch}/>
-            <img src="/stop-sign.png" alt="stop" onClick={stopStopwatch}/>
-            <img src="/finish-flag.png" alt="start" onClick={startStopwatch} />
+                <img src="/recycle.png" alt="reset" onClick={resetStopwatch} />
+                <img src="/stop-sign.png" alt="stop" onClick={stopStopwatch} />
+                <img src="/finish-flag.png" alt="start" onClick={startStopwatch} />
             </div>
         </section>
     );
-};
+});
 
 export default Stopwatch;

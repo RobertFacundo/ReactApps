@@ -1,0 +1,257 @@
+.titulo {
+    font-size: 2rem;
+    width: 400px;
+    margin-bottom: 100px;
+}
+
+.texto {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    font-family: inherit;
+    background: radial-gradient(circle, #ffffff, #f0f0b3, #bdbd78, #f1f137, #575905);
+    -webkit-background-clip: text;
+    /* Para navegadores WebKit */
+    background-clip: text;
+    color: transparent;
+
+}
+
+.puntaje {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    margin-left: 130px;
+    font-family: inherit;
+    background: radial-gradient(circle, #ffffff, #f0f0b3, #bdbd78, #f1f137, #575905);
+    -webkit-background-clip: text;
+    /* Para navegadores WebKit */
+    background-clip: text;
+    color: transparent;
+}
+
+.opciones {
+    display: flex;
+    flex-wrap: wrap;
+
+    button {
+        margin: 10px;
+        width: 230px;
+        position: relative;
+        height: 50px;
+        padding: 0 30px;
+        border: 2px solid #e8e8e8; // Cambiado a #e8e8e8
+        background: rgb(13, 13, 13); // Cambiado a negro
+        color: #e8e8e8; // Color del texto cambiado a #e8e8e8
+        user-select: none;
+        white-space: nowrap;
+        transition: all 0.05s linear;
+        font-family: inherit;
+
+        &:before,
+        &:after {
+            content: "";
+            position: absolute;
+            background: rgb(13, 13, 13); // Cambiado a negro
+            transition: all 0.2s linear;
+        }
+
+        &:before {
+            width: calc(100% + 6px);
+            height: calc(100% - 16px);
+            top: 8px;
+            left: -3px;
+        }
+
+        &:after {
+            width: calc(100% - 16px);
+            height: calc(100% + 6px);
+            top: -3px;
+            left: 8px;
+        }
+
+        &:hover {
+            cursor: crosshair;
+
+            &:before {
+                height: calc(100% - 32px);
+                top: 16px;
+            }
+
+            &:after {
+                width: calc(100% - 32px);
+                left: 16px;
+            }
+        }
+
+        &:active {
+            transform: scale(0.95);
+        }
+
+        span {
+            font-size: 18px;
+            z-index: 3;
+            position: relative;
+            font-weight: 300;
+            background: radial-gradient(circle, #ffffff, #dbddde, #b8bcbd, #979d9a, #7b7d77);
+            -webkit-background-clip: text;
+            /* Para navegadores WebKit */
+            background-clip: text;
+            color: transparent;
+        }
+    }
+}
+
+.time-counter {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+
+
+    .dot {
+        height: 5px;
+        width: 5px;
+        background-color: white;
+        border-radius: 50%;
+        margin-right: 5px;
+        transition: background-color 0.5s ease;
+
+        &.gold {
+            background-color: gold;
+        }
+    }
+}
+
+
+    .start {
+        margin-left: 150px;
+        position: relative;
+        height: 50px;
+        padding: 0 30px;
+        border: 2px solid #e8e8e8; // Cambiado a #e8e8e8
+        background: rgb(13, 13, 13); // Cambiado a negro
+        color: #e8e8e8; // Color del texto cambiado a #e8e8e8
+        user-select: none;
+        white-space: nowrap;
+        transition: all 0.05s linear;
+        font-family: inherit;
+
+        &:before,
+        &:after {
+            content: "";
+            position: absolute;
+            background: rgb(13, 13, 13); // Cambiado a negro
+            transition: all 0.2s linear;
+        }
+
+        &:before {
+            width: calc(100% + 6px);
+            height: calc(100% - 16px);
+            top: 8px;
+            left: -3px;
+        }
+
+        &:after {
+            width: calc(100% - 16px);
+            height: calc(100% + 6px);
+            top: -3px;
+            left: 8px;
+        }
+
+        &:hover {
+            cursor: crosshair;
+
+            &:before {
+                height: calc(100% - 32px);
+                top: 16px;
+            }
+
+            &:after {
+                width: calc(100% - 32px);
+                left: 16px;
+            }
+        }
+
+        &:active {
+            transform: scale(0.95);
+        }
+
+        span {
+            font-size: 23px;
+            z-index: 3;
+            position: relative;
+            font-weight: 300;
+            background: linear-gradient(to top, #ffffff, #dbddde, #b8bcbd, #979d9a, #7b7d77);
+            -webkit-background-clip: text;
+            /* Para navegadores WebKit */
+            background-clip: text;
+            color: transparent;
+            
+        }
+    }
+
+    .again {
+        margin-left: 130px;
+        position: relative;
+        height: 50px;
+        padding: 0 30px;
+        border: 2px solid #e8e8e8; // Cambiado a #e8e8e8
+        background: rgb(13, 13, 13); // Cambiado a negro
+        color: #e8e8e8; // Color del texto cambiado a #e8e8e8
+        user-select: none;
+        white-space: nowrap;
+        transition: all 0.05s linear;
+        font-family: inherit;
+
+        &:before,
+        &:after {
+            content: "";
+            position: absolute;
+            background: rgb(13, 13, 13); // Cambiado a negro
+            transition: all 0.2s linear;
+        }
+
+        &:before {
+            width: calc(100% + 6px);
+            height: calc(100% - 16px);
+            top: 8px;
+            left: -3px;
+        }
+
+        &:after {
+            width: calc(100% - 16px);
+            height: calc(100% + 6px);
+            top: -3px;
+            left: 8px;
+        }
+
+        &:hover {
+            cursor: crosshair;
+
+            &:before {
+                height: calc(100% - 32px);
+                top: 16px;
+            }
+
+            &:after {
+                width: calc(100% - 32px);
+                left: 16px;
+            }
+        }
+
+        &:active {
+            transform: scale(0.95);
+        }
+
+        span {
+            font-size: 23px;
+            z-index: 3;
+            position: relative;
+            font-weight: 300;
+            background: linear-gradient(to top, #ffffff, #dbddde, #b8bcbd, #979d9a, #7b7d77);
+            -webkit-background-clip: text;
+            /* Para navegadores WebKit */
+            background-clip: text;
+            color: transparent;
+        }
+    }

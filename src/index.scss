@@ -21,15 +21,9 @@
   }
 }
 
-@font-face {
-  font-family: 'MiFuente';
-  src: url('../fonts/ARNORG__.ttf') format('truetype');
-  /* Añade más formatos de fuente aquí si es necesario */
-}
 
 body {
   background-image: linear-gradient(to right, #0b0b0b, #0c0c0c, #0c0c0c, #0d0d0d, #0d0d0d, #131313, #171717, #1b1b1b, #242424, #2e2e2e, #383838, #424242);
-  font-family: 'MiFuente', sans-serif;
   overflow-y: hidden;
   background-size: cover;
   background-repeat: no-repeat;
